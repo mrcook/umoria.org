@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A History of Moria - A Classic Roguelike</title>
+<link rel="canonical" href="https://umoria.org/history">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body class="hack main container">
+
+<header class="sidebar">
+  <nav class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h2><a href="/">Umoria</a></h2>
+      <p class="lead">
+        The Dungeons of Moria<br>
+        - a free roguelike game -
+      </p>
+    </div>
+    <ul class="sidebar-nav">
+      <li><a class="" href="/">Home</a></li>
+      <li><a class="" href="/download/">Download</a></li>
+      <li><a class="" href="/history/">History</a></li>
+      <li><a class="" href="/highlights/">Release Highlights</a></li>
+      <li><a class="" href="/about/">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="content container">
+
+<h1>A Brief History of Moria / Umoria</h1>
+
+<p>Toward the end of 1981, while at the University of Oklahoma in the U.S., Robert A. Koeneke started developing the first version of his new Rogue inspired game <strong>Moria</strong>. He developed the game using the VMS BASIC programming language, and dubbed this series of the game, the 0.x versions.</p>
+
+<p>However, after time he became discouraged with his <em>Rogue clone</em> and didn't touch the game again for more than a year. After hearing about a programming language called Pascal, and during the Summer of 1983, he started rewriting Moria using the VMS Pascal language, for the VAX 11/780 systems, which was popular in Universities at the time.</p>
+
+<p>For Moria 2.0, Koeneke partnered with his good friend Jimmey Wayne Todd Jr., who wrote the character generation and the save/load code, along with various other features and functions.</p>
+
+<p>Koeneke worked on the game until the Spring of 1986, when he made his final release, Moria 4.5. Koeneke open sourced his game (one of the earliest known open source games) and maintenance was taken over by the students of University of Oklahoma, who released several more minor versions, with the last release being Moria 4.8 in November 1986.</p>
+
+<p>It is this version of Moria that many of the early ports were based on, including Umoria, the C language port.</p>
+
+
+<h3>NOTE</h3>
+
+<p>Information on the early days of Moria is sparse, and what we do have can be somewhat contradictory.</p>
+
+<p>Along with the code itself, there are two main sources of information: the book <em>Dungeon Hacks</em> by David L. Craddock, in which he interviews Koeneke, and an email to the <code>rec.games.roguelike.*</code> mailing list on February 21, 1996 from Koeneke (included below).</p>
+
+<p>Here are a few examples:</p>
+
+
+<h4>When did Koeneke start developing Moria?</h4>
+
+<p>Koeneke states that around March/Spring of 1983 he hadn't touched Moria for more than a year. This would put the start date to at least early 1982. If the date was actually 1981, then it is likely very late in the year.</p>
+
+<p>The source code gives a date of March 25, 1983, and a version number of <code>0.1</code> for the first version of Moria. If the <em>0.x versions</em> were written in VMS Basic, then there would be versions of 0.2, 0.3, etc. So what does this entry mean? Perhaps this is the date when he decided to rewrite Moria in VMS Pascal, although he says he started the rewrite in the Summer of '83.</p>
+
+
+<h4>When was Moria 1.0 released?</h4>
+
+<p>If the source code is to be believed then <code>1.0</code> was released May 1, 1984. However, in the book it says <em>"by the end of the summer, Koeneke had completed Moria 1.0"</em>, and in the email, <em>"that summer I finished Moria 1.0 in VMS PASCAL."</em>. Is this the summer of '83, or of '84?</p>
+
+
+<h4>What is the last version of Moria that Koeneke worked on?</h4>
+
+<p><em>Dungeon H@acks</em> says that Koeneke stopped working on Moria with the release of <code>4.5</code> in the Spring of 1986, and that the students of University of Oklahoma took over maintenance. However, in the <code>4.8</code> source code there is the comment, <code>Fixed "SLOW" bug; 06-11-86 RAK</code>, in the <code>moria.inc</code> file.</p>
+
+
+
+<h3>Umoria 4.81 - 4.87</h3>
+
+<p>In February 1987, James E. Wilson took the original Moria 4.8 sources and started porting it to the C language running on the UNIX operating system. Play testing started in early April 1987, and the first official release (<code>4.85</code>) was posted to the <a href="https://groups.google.com/forum/#!searchin/comp.sources.games/umoria/comp.sources.games/kSX-_emh0Xs/9cX4kCaZa0EJ"><code>comp.sources.games</code></a> mailing list on November 5, 1987.</p>
+
+<p>Along with making the game available on many more systems, Umoria also fixed numerous bugs, spelling errors and inconsistencies in the original Moria sources. In later versions of the game character re-rolling was introduced, and there was no interactive help, but otherwise it had few changes from the original game.</p>
+
+<p>As <code>C</code> is a much more portable language than the original Pascal, it became easier for Umoria to be ported to various other computer systems such as the IBM-PC, Atari ST, Amiga, Macintosh, Apple IIGS, VM/SP, Archimedes, as well a many different *nix systems.</p>
+
+
+
+<h3>Umoria 5.x</h3>
+
+<p>This version had a unified source for the UNIX/IBM-PC/Atari/Mac/VMS/Amiga ports and was released in early 1989. It included lots of new features, many of which were borrowed from BRUCE Moria -- developed in 1988 by Christopher J. Stuart at the Monash University, Melbourne, Australia (Clayton campus) -- along with many more bug fixes. All floating point code was eliminated, many play balance improvements were added, and various type/structure changes were introduced to reduce game size and allow fixes for pervasive bugs.</p>
+
+<p>This version was sometimes called Moria 5.x, but it should not be confused with Moria UB 5.0 (1987).</p>
+
+
+<h3>Umoria 5.6</h3>
+
+<p>David Grabiner took over development for Umoria 5.4, but had made only minor changes. Umoria 5.6 was released under the GNU General Public License (GPL v2) in October 2008.</p>
+
+<hr />
+
+
+<h3>Moria Genealogy Illustration</h3>
+
+<p>Vertical position indicates roughly when the versions were made available, although the scale is not accurate.</p>
+
+<a href="../images/moria-genealogy-2017.jpg" target="_blank" title="Moria Genealogy Illustration 2017 (click for full size)">
+  <img src="../images/moria-genealogy-2017-small.jpg" alt="Moria Genealogy Illustration 2017" style="display: block; margin: 0 auto;" />
+</a>
+
+<hr />
+
+<p><em>The following two emails are from Koeneke and Wilson about their work on Moria and Umoria. Some minor formatting changes have been made.</em></p>
+
+
+<h2>Early History of Moria</h2>
+
+<p><em>The following email was posted by Robert A. Koeneke to the <a href="https://groups.google.com/d/msg/rec.games.roguelike.angband/gFiS2tV_-AA/Gp7g-TfuJmUJ" target="_blank"><code>rec.games.roguelike.angband</code></a> mailing list on 21. February 1996.</em></p>
+
+<code>
+<p>I had some email show up asking about the origin of Moria, and its relation to Rogue. So I thought I would just post some text on the early days of Moria.</p>
+
+<p>First of all, yes, I really am the Robert Koeneke who wrote the first Moria. I had a lot of mail accusing me of pulling their leg and such. I just recently connected to Internet (yes, I work for a company in the dark ages where Internet is concerned) and was real surprised to find Moria in the news groups... Angband was an even bigger surprise, since I have never seen it. I probably spoke to its originator though... I have given permission to lots of people through the years to enhance, modify, or whatever as long as they freely distributed the results. I have always been a proponent of sharing games, not selling them.</p>
+
+<p>Anyway...</p>
+
+<p>Around 1980 or 81 I was enrolled in engineering courses at the University of Oklahoma. The engineering lab ran on a PDP 1170 under an early version of UNIX. I was always good at computers, so it was natural for me to get to know the system administrators. They invited me one night to stay and play some games, an early <em>startrek</em> game, <em>The Colossal Cave Adventure</em> (later just <em>Adventure</em>), and late one night, a new dungeon game called <em>Rogue</em>.</p>
+
+<p>So yes, I was exposed to Rogue before Moria was even a gleam in my eye. In fact, Rogue was directly responsible for millions of hours of play time wasted on Moria and its descendants...</p>
+
+<p>Soon after playing Rogue (and man, was I HOOKED), I got a job in a different department as a student assistant in computers. I worked on one of the early VAX 11/780's running VMS, and no games were available for it at that time. The engineering lab got a real geek of an administrator who thought the only purpose of a computer was WORK! Imagine... Soooo, no more games, and no more rogue!</p>
+
+<p>This was intolerable! So I decided to write my own rogue game, Moria Beta 1.0. I had three languages available on my VMS system. Fortran IV, PASCAL V1.?, and BASIC. Since most of the game was string manipulation, I wrote the first attempt at Moria in VMS BASIC, and it looked a LOT like Rogue, at least what I could remember of it. Then I began getting ideas of how to improve it, how it should work differently, and I pretty much didn't touch it for about a year.</p>
+
+<p>Around 1983, two things happened that caused Moria to be born in its recognizable form. I was engaged to be married, and the only cure for THAT is to work so hard you can't think about it; and I was enrolled for fall to take an operating systems class in PASCAL.</p>
+
+<p>So, I investigated the new version of VMS PASCAL and found out it had a new feature. Variable length strings! Wow...</p>
+
+<p>That summer I finished Moria 1.0 in VMS PASCAL. I learned more about data structures, optimization, and just plain programming that summer then in all of my years in school. I soon drew a crowd of devoted Moria players... All at OU.</p>
+
+<p>I asked Jimmey Todd, a good friend of mine, to write a better character generator for the game, and so the skills and history were born. Jimmey helped out on many of the functions in the game as well. This would have been about Moria 2.0</p>
+
+<p>In the following two years, I listened a lot to my players and kept making enhancements to the game to fix problems, to challenge them, and to keep them going. If anyone managed to win, I immediately found out how, and <em>enhanced</em> the game to make it harder. I once vowed it was <em>unbeatable</em>, and a week later a friend of mine beat it! His character, <em>Iggy</em>, was placed into the game as <em>The Evil Iggy</em>, and immortalized... And of course, I went in and plugged up the trick he used to win...</p>
+
+<p>Around 1985 I started sending out source to other universities. Just before a OU / Texas football clash, I was asked to send a copy to the University of Texas... I couldn't resist... I modified it so that the beggar on the town level was <em>An OU football fan</em> and they moved at maximum rate. They also multiplied at maximum rate... So the first step you took and woke one up, it crossed the floor increasing to hundreds of them and pounded you into oblivion... I soon received a call and provided instructions on how to <em>de-enhance</em> the game!</p>
+
+<p>Around 1986 - 87 I released Moria 4.7, my last official release. I was working on a Moria 5.0 when I left OU to go to work for American Airlines (and yes, I still work there). Moria 5.0 was a complete rewrite, and contained many neat enhancements, features, you name it. It had water, streams, lakes, pools, with water monsters. It had <em>mysterious orbs</em> which could be carried like torches for light but also gave off magical aura's (like protection from fire, or aggravate monster...). It had new weapons and treasures... I left it with the student assistants at OU to be finished, but I guess it soon died on the vine. As far as I know, that source was lost...</p>
+
+<p>I gave permission to anyone who asked to work on the game. Several people asked if they could convert it to <code>C</code>, and I said fine as long as a complete credit history was maintained, and that it could NEVER be sold, only given. So I guess one or more of them succeeded in their efforts to rewrite it in <code>C</code>.</p>
+
+<p>I have since received thousands of letters from all over the world from players telling about their exploits, and from administrators cursing the day I was born... I received mail from behind the iron curtain (while it was still standing) talking about the game on VAX's (which supposedly couldn't be there due to export laws). I used to have a map with pins for every letter I received, but I gave up on that!</p>
+
+<p>I am very happy to learn my creation keeps on going... I plan to download it and Angband and play them... Maybe something has been added that will surprise me! That would be nice... I never got to play Moria and be surprised...</p>
+</code>
+
+<hr />
+
+
+<h2>The Early Days of Umoria</h2>
+
+<p><em>The following email was posted by James E. Wilson to the <a href="https://groups.google.com/d/msg/rec.games.roguelike.moria/Ym_kL4m6GPk/9Ma5uOcn66UJ" target="_blank"><code>rec.games.roguelike.moria</code></a> mailing list in January 2006.</em></p>
+
+<code>
+<p>I started work on Umoria in February 1987. I somehow acquired play testers in April. I don't recall exactly how, but I was at a university, so maybe they saw me playing it on a public terminal and asked for a copy. The game slowly spread around the Berkeley area. By November, the game was in good enough shape that I could post it to comp.sources.games. I think I was still calling it UNIX Moria then, to distinguish it from the original, but the comp.sources.games moderator shortened it to Umoria, and that name has stuck. After the comp.sources.games posting, the game was widely available, and things just grew from there. The Usenet <code>rec.games.moria</code> group was created sometime around Jan 1, 1988, and was where most of the early discussions about it occurred.</p>
+
+<p>I originally got involved with Moria because I was tired of playing other games. I spent a lot of time playing games such as rogue and hack, and was looking for something different to try. There was a game called UltraRogue that I enjoyed playing. Unfortunately, it had some very frustrating bugs, and it was only available as a binary. I spent some time investigating the possibilities of trying to decompile it and fix it. Before I got very far, I chanced upon a copy of the VMS Pascal Moria sources and quickly decided that porting the sources to Unix was a better project than trying to fix UltraRogue. After I gained some fame as the Umoria author, I did manage to get a copy of of the UltraRogue sources, but by then it was too late, and I wasn't sure if I had a legal copy of the sources, so I never did anything with them.</p>
+
+<p>The original game was written in VAX/VMS Pascal with some VAX/VMS Assembler. I did not have access to a VMS machine, and both the Pascal and Assembler code would not work with Unix because of many uses of VMS extensions. Since <code>C</code> was a more common language for Unix anyways, I decided to just convert the whole thing to <code>C</code>. Much of the initial syntax conversion was done via Emacs macros. Then it was just a matter of tweaking the sources until they would compile. The hardest part was finding and fixing all of the off-by-one errors, as Pascal array indexing starts at 1, and <code>C</code> array indexing starts at 0. It took me years to find and fix all of the off-by-one errors. I still can't believe how hard it was to find them all. At least, I hope I found them all.</p>
+
+<p>Mostly what I remember about the early years of working on Umoria was that it was a good introduction to software engineering principles. I had to learn how to deal with bugs, bug fixes, release schedules, making and distributing releases, etc. It was just a game, but I learned many valuable lessons about real world software development while working on it.</p>
+
+<p>One of my favorite moments from my Umoria years is when I got mail from one of the authors of rogue. I recognized the name right away, and had to ask. He confirmed that he was one of the rogue authors, and that he was a fan of Umoria. That made my day.</p>
+
+<p>The credits in the PC/Windows game Diablo mention that it was inspired in part by Umoria.</p>
+</code>
+
+<p class="footer-text">Umoria.org © 2016-2019 Michael R. Cook</p>
+</main>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-761310-40', 'auto');
+ga('send', 'pageview');
+</script>
+</body>
+</html>
