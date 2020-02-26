@@ -22,4 +22,4 @@ successful action roguelike games, _Diablo_!
 The umoria.org website files are released under the GNU General Public
 License v3.0. See the [LICENCE](LICENCE) file for more details.
 
-Copyright (C) 2016-2019 Michael R. Cook
+Copyright (C) 2016-2020 Michael R. Cook

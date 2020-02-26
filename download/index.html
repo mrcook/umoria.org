@@ -30,33 +30,32 @@
 
 <main class="content container">
 
-<h1>Download Umoria 5.7.10</h1>
+<h1>Download Umoria 5.7.11</h1>
 
 <ul>
-<li><a href="https://github.com/dungeons-of-moria/umoria/releases/download/v5.7.10/umoria-5-7-10-win64.zip">Umoria 5.7.10 Windows (64bit)</a></li>
-<li><a href="https://github.com/dungeons-of-moria/umoria/releases/download/v5.7.10/umoria-5-7-10-win32.zip">Umoria 5.7.10 Windows (32bit)</a></li>
-<li><a href="https://github.com/dungeons-of-moria/umoria/releases/download/v5.7.10/umoria-5-7-10-macos.gz">Umoria 5.7.10 macOS</a></li>
+<li><a href="https://github.com/dungeons-of-moria/umoria/releases/download/v5.7.11/umoria-5-7-11-win64.zip">Umoria 5.7.11 Windows (64bit)</a></li>
+<li><a href="https://github.com/dungeons-of-moria/umoria/releases/download/v5.7.11/umoria-5-7-11-win32.zip">Umoria 5.7.11 Windows (32bit)</a></li>
+<li><a href="https://github.com/dungeons-of-moria/umoria/releases/download/v5.7.11/umoria-5-7-11-macos.gz">Umoria 5.7.11 macOS</a></li>
 <li><a href="https://github.com/dungeons-of-moria/umoria" target="_blank">Umoria Source Code (Github)</a></li>
 </ul>
 
 <p><em>Installation details are below.</em></p>
 
-
-<h3>Bug Fixes</h3>
-
 <ul>
-  <li><code>xor_byte</code> decryption was not being performed correctly while <b>reading</b> <code>score.dat</code> files.</li>
-  <li>Introduced with commit: <a href="https://github.com/dungeons-of-moria/umoria/commit/676cdfed6c274279fa889c079e84788adc954cac" target="_blank">676cdfed6c274279fa889c079e84788adc954cac</a> (<code>readHighScore()</code> function).</li>
-  <li>Note: <code>game.sav</code> files were <b>not affected</b> by this bug.</li>
+  <li>Rename several `ui_inventory.cpp` functions to avoid name clashes (bugfix).</li>
+  <li>Player ToHit/Armor/Damage Adjustment functions now return `int16` types.</li>
+  <li>Minor style changes.</li>
+  <li>Various `CMakeLists.txt` updates:
+    <ul>
+      <li>Allow out-of-source builds.</li>
+      <li>Use `configure_file` to set variables in `splash.txt` and `versions.txt`.</li>
+      <li>Remove unneeded `make install`.</li>
+      <li>Fix for finding ncurses on Linux/macOS.</li>
+      <li>GCC 8 support.</li>
+    </ul>
+  </li>
+  <li>Update `AUTHORS`: add more known features from `-JWT-`.</li>
 </ul>
-
-<h3>Code</h3>
-
-<ul>
-  <li>Delete <code>constant.h</code>, moving many constants into <code>config.h</code> and the rest into their related headers. Things are looking pretty ugly at the moment but perhaps it's a better starting point for further refactoring.</li>
-  <li>Change <code>config.h</code> to namespace'd constants - perhaps not a good approach but let's see!</li>
-</ul>
-
 
 
 <h2>Installation</h2>
@@ -78,7 +77,7 @@
 
 <p>Then open the <code>terminal</code> app (Cmd-space then typing "terminal" should work). From there type <code>cd ~/umoria</code> to change into the Umoria directory. To launch the game type <code>./umoria</code>.</p>
 
-<p class="footer-text">Umoria.org © 2016-2019 Michael R. Cook</p>
+<p class="footer-text">Umoria.org © 2016-2020 Michael R. Cook</p>
 </main>
 
 <script>
