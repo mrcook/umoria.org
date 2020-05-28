@@ -30,29 +30,39 @@
 
 <main class="content container">
 
-<h1>Download Umoria 5.7.11</h1>
+<h1>Download Umoria 5.7.12</h1>
 
 <ul>
-<li><a href="https://github.com/dungeons-of-moria/umoria/releases/download/v5.7.11/umoria-5-7-11-win64.zip">Umoria 5.7.11 Windows (64bit)</a></li>
-<li><a href="https://github.com/dungeons-of-moria/umoria/releases/download/v5.7.11/umoria-5-7-11-win32.zip">Umoria 5.7.11 Windows (32bit)</a></li>
-<li><a href="https://github.com/dungeons-of-moria/umoria/releases/download/v5.7.11/umoria-5-7-11-macos.gz">Umoria 5.7.11 macOS</a></li>
+<li><a href="https://github.com/dungeons-of-moria/umoria/releases/download/v5.7.12/umoria-5-7-12-win64.zip">Umoria 5.7.12 Windows (64bit)</a></li>
+<li><a href="https://github.com/dungeons-of-moria/umoria/releases/download/v5.7.12/umoria-5-7-12-win32.zip">Umoria 5.7.12 Windows (32bit)</a></li>
+<li><a href="https://github.com/dungeons-of-moria/umoria/releases/download/v5.7.12/umoria-5-7-12-macos.gz">Umoria 5.7.12 macOS</a></li>
 <li><a href="https://github.com/dungeons-of-moria/umoria" target="_blank">Umoria Source Code (Github)</a></li>
 </ul>
 
 <ul>
-  <li>Rename several <code>ui_inventory.cpp</code> functions to avoid name clashes (bugfix).</li>
-  <li>Player ToHit/Armor/Damage Adjustment functions now return <code>int16</code> types.</li>
-  <li>Minor style changes.</li>
-  <li>Various <code>CMakeLists.txt</code> updates:
+  <li>Bugfix in <code>pray()</code>: should loose mana when failing to recite a prayer.</li>
+  <li>Add <code>Press ? for help</code> to the message bar on game start/load.</li>
+  <li>Use roguelike keys by default, and remove setting option from the CLI.</li>
+  <li>Player (<code>row</code>,<code>col</code>) and Monster (<code>y</code>,<code>x</code>) now use <code>Coord_t</code> for their positions.</li>
+  <li>Use <code>Coord_t</code> in all functions that used <code>y, x</code> coordinates.</li>
+  <li>Reorganise some game arrays and variables, placing them on an object:</li>
     <ul>
-      <li>Allow out-of-source builds.</li>
-      <li>Use <code>configure_file</code> to set variables in <code>splash.txt</code> and <code>versions.txt</code>.</li>
-      <li>Remove unneeded <code>make install</code>.</li>
-      <li>Fix for finding ncurses on Linux/macOS.</li>
-      <li>GCC 8 support.</li>
+      <li>put <code>inventory</code> onto <code>Player_t</code></li>
+      <li>put <code>treasure_list</code> and <code>current_treasure_id</code> onto <code>Game_t</code></li>
     </ul>
+  <li>Type changes:</li>
+    <ul>
+    <li><code>rcmove</code> variable in <code>memoryUpdateRecall()</code> signature is now an <code>uint32_t</code> like everywhere else.</li>
+    <li>Change <code>store_buy</code> function signature type to use <code>uint8_t</code>, and return a <code>bool</code>.</li>
+    <li>Various other types changes.</li>
+    </ul>
+  <li>Typo fixes: <code>item_sub_catory</code>, <code>current_askin_price</code>.</li>
+  <li>Various <code>clang-format</code> and <code>clang-tidy</code> updates.</li>
+  <li>Move the Manual and FAQ to the <code>historical</code> directory and remove from release.
+      It seems that these are very much out of date - possibly for any 5.x version - so
+      it makes sense to move them back in with the rest of the historical documents.
   </li>
-  <li>Update <code>AUTHORS</code>: add more known features from <code>-JWT-</code>.</li>
+  <li>Various compiler fixes.</li>
 </ul>
 
 
