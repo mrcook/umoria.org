@@ -30,48 +30,22 @@
 
 <main class="content container">
 
-<h1>Download Umoria 5.7.13</h1>
+<h1>Download Umoria 5.7.14</h1>
 
 <ul>
-<li><a href="https://github.com/dungeons-of-moria/umoria/releases/download/v5.7.13/umoria-5-7-13-win64.zip">Umoria 5.7.13 Windows (64bit)</a></li>
-<li><a href="https://github.com/dungeons-of-moria/umoria/releases/download/v5.7.13/umoria-5-7-13-win32.zip">Umoria 5.7.13 Windows (32bit)</a></li>
-<li><a href="https://github.com/dungeons-of-moria/umoria/releases/download/v5.7.13/umoria-5-7-13-macos.gz">Umoria 5.7.13 macOS</a></li>
+<li><a href="https://github.com/dungeons-of-moria/umoria/releases/download/v5.7.14/umoria-5-7-14-win64.zip">Umoria 5.7.14 Windows (64bit)</a></li>
+<li><a href="https://github.com/dungeons-of-moria/umoria/releases/download/v5.7.14/umoria-5-7-14-win32.zip">Umoria 5.7.14 Windows (32bit)</a></li>
+<li><a href="https://github.com/dungeons-of-moria/umoria/releases/download/v5.7.14/umoria-5-7-14-macos.gz">Umoria 5.7.14 macOS</a></li>
 <li><a href="https://github.com/dungeons-of-moria/umoria" target="_blank">Umoria Source Code (Github)</a></li>
 </ul>
 
-<h3>Umoria 5.7.13 changes</h3>
+<h3>Umoria 5.7.14 changes</h3>
 
 <ul>
-  <li>Bugfix in <code>getAndCastMagicSpell()</code>: losing mana when cancelling a mage spell.</li>
-  <li>Minor change to the splash screen.</li>
-</ul>
-
-<h3>Umoria 5.7.12 changes</h3>
-
-<ul>
-  <li>Bugfix in <code>pray()</code>: should loose mana when failing to recite a prayer.</li>
-  <li>Add <code>Press ? for help</code> to the message bar on game start/load.</li>
-  <li>Use roguelike keys by default, and remove setting option from the CLI.</li>
-  <li>Player (<code>row</code>,<code>col</code>) and Monster (<code>y</code>,<code>x</code>) now use <code>Coord_t</code> for their positions.</li>
-  <li>Use <code>Coord_t</code> in all functions that used <code>y, x</code> coordinates.</li>
-  <li>Reorganise some game arrays and variables, placing them on an object:</li>
-    <ul>
-      <li>put <code>inventory</code> onto <code>Player_t</code></li>
-      <li>put <code>treasure_list</code> and <code>current_treasure_id</code> onto <code>Game_t</code></li>
-    </ul>
-  <li>Type changes:</li>
-    <ul>
-    <li><code>rcmove</code> variable in <code>memoryUpdateRecall()</code> signature is now an <code>uint32_t</code> like everywhere else.</li>
-    <li>Change <code>store_buy</code> function signature type to use <code>uint8_t</code>, and return a <code>bool</code>.</li>
-    <li>Various other types changes.</li>
-    </ul>
-  <li>Typo fixes: <code>item_sub_catory</code>, <code>current_askin_price</code>.</li>
-  <li>Various <code>clang-format</code> and <code>clang-tidy</code> updates.</li>
-  <li>Move the Manual and FAQ to the <code>historical</code> directory and remove from release.
-      It seems that these are very much out of date - possibly for any 5.x version - so
-      it makes sense to move them back in with the rest of the historical documents.
-  </li>
-  <li>Various compiler fixes.</li>
+  <li>Revert to Moria keys as default.</li>
+  <li>Minor configuration update to support compiling on Visual Studio 2019.</li>
+  <li>Bug Fix: Calculate throw distance/position correctly. Introduced with commit <a href="https://github.com/dungeons-of-moria/umoria/commit/ca135fda382bf206a010f9f9550cf4fa299bd2a9">#fc1d6d</a>.</li>
+  <li>Bug Fix: Correctly stack inventory items (arrows/bolts). Introduced with commit <a href="https://github.com/dungeons-of-moria/umoria/commit/195c9a68d3ff7da47296888c635c87c37f435413">#195c9a6</a>.</li>
 </ul>
 
 
@@ -94,7 +68,7 @@
 
 <p>Then open the <code>terminal</code> app (Cmd-space then typing "terminal" should work). From there type <code>cd ~/umoria</code> to change into the Umoria directory. To launch the game type <code>./umoria</code>.</p>
 
-<p class="footer-text">Umoria.org © 2016-2020 Michael R. Cook</p>
+<p class="footer-text">Umoria.org © 2016-2021 Michael R. Cook</p>
 </main>
 
 <script>
