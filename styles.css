@@ -310,3 +310,16 @@ p.ascii-dungeon {
   padding: 0;
   text-align: center;
 }
+
+.intro-heading {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.tagline {
+  font-size: 90%;
+  font-weight: normal;
+  font-style: italic;
+  margin-top: 0.5em;
+  text-align: center;
+}
